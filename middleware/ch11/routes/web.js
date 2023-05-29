@@ -1,7 +1,8 @@
 import express from 'express';
 const router = express.Router();
-import {homeController} from '../controller/homeController.js';
+import {StudentController} from '../controller/homeController.js';
 
-router.get('/', homeController);
+router.get('/', StudentController.homeController);
+router.get('/session',StudentController.get_session_info)
 
 export default router;
